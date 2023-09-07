@@ -47,13 +47,13 @@
     <div class="d-flex align-items-center justify-content-between">
      
         <img src="assets/img/logo.png" alt="">
-        <h3 class="text-dark fw-bold">Prisca Couture</h3>
+        <h3 class="text-dark fw-bold">PriscaShop</h3>
      
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
     <div class="search-bar">
-      <h1>Bienvenue dans Prisca Couture </h1>
+      <h1>Bienvenue dans PriscaShop </h1>
     </div><!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
@@ -92,7 +92,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="">
+        <a class="nav-link " href="index.html">
           <i class="bi bi-grid"></i>
           <span>Acceuil</span>
         </a>
@@ -100,21 +100,21 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="clients.blade.php">
-          <i class="bi bi-people"></i>
+          <i class="bi bi-person"></i>
           <span>Clients</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-scissors"></i>
+          <i class="bi bi-question-circle"></i>
           <span>Modèles</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-rulers"></i>
+          <i class="bi bi-envelope"></i>
           <span>Mesures</span>
         </a>
       </li><!-- End Contact Page Nav -->
@@ -128,14 +128,14 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-currency-exchange"></i>
+          <i class="bi bi-box-arrow-in-right"></i>
           <span>Paiement</span>
         </a>
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-dash-circle"></i>
           <span>Personnels</span>
         </a>
       </li><!-- End Error 404 Page Nav -->
@@ -158,7 +158,7 @@
         </div>
         
         <div class="col-xxl-4 col-md-6">
-            <h1 class="fw-bold">STATISTIQUES</h1>
+            <h1 class="fw-bold">CLIENTS</h1>
         </div>
       </div>
     </div><!-- End Page Title -->
