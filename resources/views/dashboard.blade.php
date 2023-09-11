@@ -99,42 +99,42 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="clients.blade.php">
+        <a class="nav-link collapsed" href="{{route('clients')}}">
           <i class="bi bi-people"></i>
           <span>Clients</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
+        <a class="nav-link collapsed" href="{{route('modeles')}}">
           <i class="bi bi-scissors"></i>
           <span>Modèles</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="{{route('mesures')}}">
           <i class="bi bi-rulers"></i>
           <span>Mesures</span>
         </a>
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
+        <a class="nav-link collapsed" href="{{route('couture')}}">
           <i class="bi bi-card-list"></i>
           <span>Couture</span>
         </a>
       </li><!-- End Register Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
+        <a class="nav-link collapsed" href="{{route('paiement')}}">
           <i class="bi bi-currency-exchange"></i>
           <span>Paiement</span>
         </a>
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
+        <a class="nav-link collapsed" href="{{route('personnels')}}">
           <i class="bi bi-person"></i>
           <span>Personnels</span>
         </a>
@@ -246,7 +246,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>SIMPLON</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>SIMPLON</span>Prisca-Shop</strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
