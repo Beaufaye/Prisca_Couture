@@ -12,8 +12,8 @@
         <div class="alert alert-success">
             {{session('status')}}
         </div>
-        
     @endif
+    
     <div class="row">
       <form action="{{route('store_client')}}" method="POST" class="form-group">
         @csrf
@@ -47,6 +47,7 @@
               </div>
           </div>
           <button type="submit" class="btn btn-primary">ENREGISTRER</button>
+          <a href="{{route('clients')}}"><button type="button" class="btn btn-dark">VOIR LA LISTE DES CLIENTS</button></a>
       </form>
 
 
