@@ -11,5 +11,6 @@ class modeles extends Model
     protected $fillable = [
         'nom_modele',
         'image',
+        'class',
     ];
 }

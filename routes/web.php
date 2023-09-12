@@ -31,9 +31,9 @@ Route::get('ajouter_client', [ClientsController::class, 'ajouter_client'])->name
 Route::post('ajouterc_traitement', [ClientsController::class, 'store'])->name('store_client');
 Route::get('clients', [ClientsController::class, 'clients'])->name('clients');
 
-Route::get('Modeles/ajouterM', [ModelesController::class, 'create'])->name('ajouterM');
+Route::get('ajouterM', [ModelesController::class, 'store'])->name('store_modele');
 
-Route::get('Modeles/modeles', [ModelesController::class, 'modeles'])->name('modeles');
+Route::get('Modeles/modeles', [ModelesController::class, 'storeM'])->name('modeles');
 
 Route::get('Couture/couture', [CoutureController::class, 'couture'])->name('couture');
 

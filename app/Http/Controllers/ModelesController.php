@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\modeles;
 
 class ModelesController extends Controller
 {
@@ -18,19 +19,29 @@ class ModelesController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function storeM(Request $request)
     {
         return view('Modeles.ajouterM');
+
+        $request->validate([
+            'nom' => 'required',
+            'image' => 'required',
+    
+        ]);
+        $model= new modeles();
+        $model->nom = $request->nom;
+        $model->image = $request->image;
+        $model->class = $request->class;
+        $model->save();
+
+        return redirect('/ajouter')->with('status','L\'model a bien été ajouter avec succes');
+
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
-
+      
     /**
      * Display the specified resource.
      */
