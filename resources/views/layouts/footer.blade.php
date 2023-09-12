@@ -1,7 +1,7 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>SIMPLON</span>Prisca-Shop</strong>. All Rights Reserved
+      &copy; Copyright <strong><span>SIMPLON </span> Prisca-Shop</strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

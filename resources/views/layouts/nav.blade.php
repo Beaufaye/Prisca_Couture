@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="">
+        <a class="nav-link " href="{{route('dashboard')}}">
           <i class="bi bi-grid"></i>
           <span>Acceuil</span>
         </a>
@@ -24,12 +24,6 @@
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('mesures')}}">
-          <i class="bi bi-rulers"></i>
-          <span>Mesures</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('couture')}}">
