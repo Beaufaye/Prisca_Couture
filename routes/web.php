@@ -32,12 +32,14 @@ Route::post('ajouterc_traitement', [ClientsController::class, 'store'])->name('s
 Route::get('clients', [ClientsController::class, 'clients'])->name('clients');
 
 Route::get('modele', [ModelesController::class, 'modele'])->name('modele');
-Route::get('modeleT', [ModelesController::class, 'modeleT'])->name('modeleT');
+Route::post('modeleT', [ModelesController::class, 'modeleT'])->name('modeleT');
 Route::get('modeles', [ModelesController::class, 'modeles'])->name('modeles');
 
 Route::get('Couture/couture', [CoutureController::class, 'couture'])->name('couture');
 
 Route::get('Paiement/paiement', [PaiementController::class, 'paiement'])->name('paiement');
+Route::get('Paiement/paiements', [PaiementController::class, 'paiements'])->name('paiements');
+Route::get('Paiement/paiementT', [PaiementController::class, 'paiementT'])->name('paiementT');
 
 Route::get('Personnels/personnels', [PersonnelsController::class, 'personnels'])->name('personnels');
 

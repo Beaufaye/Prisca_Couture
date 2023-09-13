@@ -7,7 +7,7 @@
     <h1 class="text-center">LISTES DES CLIENTS</h1>
   </div><!-- End Page Title -->
 
-  <section class="section dashboard">
+  <section class="section dashboard mt-5">
     <div class="row">
       <table class="table table-striped table-bordered zero-configuration">
         <h2 class="text-center"></h2>

@@ -3,7 +3,7 @@
 <main id="main" class="main">
 
 <div class="pagetitle col-lg-8">
-    <a href="{{route('ajouter_client')}}"><button type="button" class="btn btn-primary">AJOUTER</button></a>
+    <a href="{{route('paiements')}}"><button type="button" class="btn btn-primary">AJOUTER</button></a>
     <h1 class="text-center">PAIEMENTS</h1>
   </div><!-- End Page Title -->
 

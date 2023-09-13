@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\paiement;
 class PaiementController extends Controller
 {
     /**
@@ -23,12 +23,29 @@ class PaiementController extends Controller
         //
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function paiementT(Request $request)
     {
-        //
+         $request->validate([
+             'nom_prenom' => 'required',
+             'image' => 'required',
+             'montant' => 'required', 
+             'reste' => 'required',
+             'acompte' => 'required',
+             'date_paiement' => 'required',
+             'mode_paiement' => 'required',
+         ]);
+
+        $paiement = new Paiement();
+        $paiement->nom_modele = $request->nom_modele;
+        $paiement->image = $request->image->store('photo', 'public');
+        $paiement->save();
+
+        return redirect('paiement')->with('status', 'Le paiement a bien été effectué.');
     }
 
     /**

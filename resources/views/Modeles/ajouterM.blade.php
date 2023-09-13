@@ -27,7 +27,7 @@
           <div class="mb-3 row">
             <label for="nom_prenom" class="col-sm-2 col-form-label">Choisissez une image</label>
             <div class="col-sm-10">
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" name="image" type="file" required>
             </div>
           </div>
           

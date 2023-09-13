@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\modeles;
-class ModelesController extends Controller
+
+class ModeleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ModelesController extends Controller
     public function modeles()
     {
         $modeles = Modeles::all();
-        return view('Modeles.modeles', compact('modeles'));
+        return view('Clients.clients', compact('clients'));
     }
 
     /**
@@ -27,26 +27,11 @@ class ModelesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function modele(Request $request)
+    public function store(Request $request)
     {
-        return view('Modeles.ajouterM');
+        //
     }
 
-
-    public function modeleT(Request $request)
-    {
-         $request->validate([
-            'nom_modele' => 'required',
-             'image' => 'required',
-         ]);
-
-        $modeles = new Modeles();
-        $modeles->nom_modele = $request->nom_modele;
-        $modeles->image = $request->image->store('photo', 'public');
-        $modeles->save();
-
-        return redirect('modele')->with('status', 'Le modèle a bien été ajouté.');
-    }
     /**
      * Display the specified resource.
      */
