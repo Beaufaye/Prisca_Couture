@@ -14,7 +14,7 @@
         
     @endif
     <div class="row">
-      <form action="{{route('store_modele')}}" method="POST" class="form-group">
+      <form action="{{route('modeleT')}}" method="POST" class="form-group">
         @csrf
        
         <div class="mb-3 row">
