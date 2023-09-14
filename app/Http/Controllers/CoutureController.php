@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\couture;
+use App\Models\clients;
+use App\Models\modeles;
 class CoutureController extends Controller
 {
     /**
@@ -12,16 +14,40 @@ class CoutureController extends Controller
      */
     public function couture()
     {
-        return view('Couture.couture');
+        $couture = Couture::all();
+        return view('Couture.couture', compact('couture'));
     }
 
+
+    public function coutures()
+    {
+        $modeles = Modeles::all();
+        $clients = Clients::all();
+        return view('Couture.ajout_couture', compact('modeles', 'clients'));
+    }
+    public function coutureT(Request $request)
+    {
+        $request->validate([
+            'date_depot' => 'required',
+             'date_recuperation' => 'required',
+             'modele_id' => 'required',
+             'client_id' => 'required',
+         ]);
+
+        $couture = new Couture();
+        $couture->date_depot = $request->date_depot;
+        $couture->date_recuperation = $request->date_recuperation;
+        $couture->modele_id = $request->modele_id;
+        $couture->client_id = $request->client_id;
+        $couture->save();
+
+        return redirect('couture')->with('status', 'Le modèle a bien été ajouté.');
+        
+    }
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        //
-    }
+    
 
     /**
      * Store a newly created resource in storage.

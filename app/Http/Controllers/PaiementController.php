@@ -5,60 +5,51 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\paiement;
+use App\Models\clients;
 class PaiementController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function paiement()
     {
-        return view('Paiement.paiement');
+        $paiement = Paiement::all();
+        return view('Paiement.paiement', compact('paiement'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    
+    public function paiements()
     {
-        //
+        $clients = Clients::all();
+        return view('Paiement.ajout_paiement', compact('clients'));
     }
 
-
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function paiementT(Request $request)
     {
          $request->validate([
-             'nom_prenom' => 'required',
-             'image' => 'required',
+             
+             'objet' => 'required',
              'montant' => 'required', 
              'reste' => 'required',
-             'acompte' => 'required',
              'date_paiement' => 'required',
-             'mode_paiement' => 'required',
+             'clients_id' => 'required',
+             
          ]);
 
         $paiement = new Paiement();
-        $paiement->nom_modele = $request->nom_modele;
-        $paiement->image = $request->image->store('photo', 'public');
+        $paiement->objet = $request->objet;
+        $paiement->montant = $request->montant;
+        $paiement->reste = $request->reste;
+        $paiement->date_paiement = $request->date_paiement;
+        $paiement->clients_id = $request->clients_id;
         $paiement->save();
 
         return redirect('paiement')->with('status', 'Le paiement a bien été effectué.');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         //

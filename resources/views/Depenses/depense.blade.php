@@ -3,8 +3,8 @@
 <main id="main" class="main">
 
 <div class="pagetitle col-lg-8">
-    <a href="{{route('paiements')}}"><button type="button" class="btn btn-primary">EFFECTUER UN PAIEMENT</button></a>
-    <h1 class="text-center">PAIEMENTS</h1>
+    <a href="{{route('depenseaj')}}"><button type="button" class="btn btn-primary">EFFECTUER UN PAIEMENT</button></a>
+    <h1 class="text-center">DEPENSE</h1>
   </div><!-- End Page Title -->
 
   <section class="section dashboard">
@@ -15,28 +15,21 @@
         <thead>
          <tr>
              <th>ID</th>
-             <th>Objet</th>
              <th>Montant</th>
-             <th>Acompte</th>
-             <th>Reste</th>
-             <th>Mode de paiement</th>
-             <th>Date paiement</th>
+             <th>Date dépense</th>
+             <th>Personnel ayant éffectué la dépense</th>
              <th>Client</th>
              
          </tr>
         </thead>
 
         <tbody>
-          @foreach($paiement as $paiement)
+          @foreach($depense as $depense)
         <tr>
-            <th>{{ $paiement->id}}</th>
-            <td>{{ $paiement->objet}}</td>
-            <td>{{ $paiement->montant}}</td>
-            <td>{{ $paiement->acompte}}</td>
-            <td>{{ $paiement->reste}}</td>
-            <td>{{ $paiement->mode_paiement}}</td>
-            <td>{{ $paiement->date_paiement}}</td>
-            <td>{{ $paiement->couture_id}}</td>
+            <th>{{ $depense->id}}</th>
+            <td>{{ $depense->montant}}</td>
+            <td>{{ $depense->date_depense}}</td>
+            <td>{{ $depense->personnels_id}}</td>
         </tr>
         
       </tbody>

@@ -17,7 +17,7 @@
     <div class="row">
       <form action="{{route('store_client')}}" method="POST" class="form-group">
         @csrf
-       
+        
         <div class="mb-3 row">
             <label for="nom_prenom" class="col-sm-2 col-form-label">Nom & Prénom</label>
             <div class="col-sm-10">

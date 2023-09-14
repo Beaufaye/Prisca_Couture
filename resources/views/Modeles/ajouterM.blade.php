@@ -14,7 +14,7 @@
         
     @endif
     <div class="row">
-      <form action="{{route('modeleT')}}" method="POST" class="form-group">
+      <form action="{{route('modeleT')}}" method="POST" class="form-group" enctype="multipart/form-data">
         @csrf
        
         <div class="mb-3 row">
@@ -32,7 +32,8 @@
           </div>
           
           <button type="submit" class="btn btn-primary">ENREGISTRER</button>
-      </form>
+          <a href="{{route('modeles')}}"><button type="button" class="btn btn-dark">VOIR LA LISTE DES MODELES</button></a>
+        </form>
 
   
 </div>

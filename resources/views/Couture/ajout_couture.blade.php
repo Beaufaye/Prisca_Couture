@@ -3,7 +3,7 @@
 <main id="main" class="main">
 
   <div class="pagetitle col-lg-8">
-    <h1 class="text-center">PAIEMENT</h1>
+    <h1 class="text-center">AJOUT D'UNE COUTURE</h1>
   </div><!-- End Page Title -->
 
   <section class="section dashboard">
@@ -15,41 +15,37 @@
     @endif
     
     <div class="row">
-      <form action="{{route('paiementT')}}" method="POST" class="form-group">
+      <form action="{{route('coutureT')}}" method="POST" class="form-group">
         @csrf
        
-       
-          
+        
             <div class="mb-3 row">
-                <label  class="col-sm-2 col-form-label">Objet</label>
+                <label  class="col-sm-2 col-form-label">Date de dépot</label>
                 <div class="col-sm-10">
-                    <select name="objet" class="form-select" required>
-                        <option value="">Avance</option>
-                        <option value="">Paiement Total</option>
-                        <option value="">Reste</option>
+                    <input type="date" name="date_depot" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label  class="col-sm-2 col-form-label">Date de récupération</label>
+                <div class="col-sm-10">
+                  <input type="date" name="date_de_recuperation" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label  class="col-sm-2 col-form-label">Modèles</label>
+                <div class="col-sm-10">
+                    <select name="modeles_id" class="form-select" required>
+                        <option>Selectionner le modèle</option>;
+                                    @foreach ($modeles as $mod)
+                                    <option value="{{$mod->id}}">{{$mod->nom_modele}}</option>
+                                @endforeach
+                        
                      </select>
                 </div>
-              </div>
-              <div class="mb-3 row">
-                <label  class="col-sm-2 col-form-label">Montant</label>
-                <div class="col-sm-10">
-                  <input type="number" name="montant" class="form-control" required>
                 </div>
-              </div>
-             
-              <div class="mb-3 row">
-                <label  class="col-sm-2 col-form-label">Reste à payer</label>
-                <div class="col-sm-10">
-                  <input type="number" name="reste" class="form-control" required>
-                </div>
-              </div>
-              
-              <div class="mb-3 row">
-                <label  class="col-sm-2 col-form-label">Date de Paiement</label>
-                <div class="col-sm-10">
-                  <input type="date" name="date_paiement" class="form-control" required>
-                </div>
-              </div>
+
               <div class="mb-3 row">
                 <label  class="col-sm-2 col-form-label">Client</label>
                 <div class="col-sm-10">
@@ -62,7 +58,7 @@
                      </select>
                 </div>
                 </div>
-          
+
           <button type="submit" class="btn btn-primary">ENREGISTRER</button>
           <a href="{{route('paiement')}}"><button type="button" class="btn btn-dark">VOIR LES PAIEMENTS</button></a>
       </form>

@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('paiements', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_prenom');
+            $table->string('objet');
             $table->integer('montant');
-            $table->integer('acompte');
             $table->integer('reste');
-            $table->string('mode_paiement');
             $table->date('date_paiement');
+            $table->unsignedBigInteger('clients_id')->unsigned();
+            $table->foreign('clients_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

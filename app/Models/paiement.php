@@ -1,20 +1,25 @@
 <?php
 
 namespace App\Models;
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\clients;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class paiement extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nom_prenom',
+      
+        'objet',
         'montant',
-        'acompte',
         'reste',
-        'mode_paiement',
         'date_paiement',
+        'clients_id',
     ];
+
+    function Client(){
+        return $this->BelongsTo(clients::class, 'clients_id');
+    }
 }

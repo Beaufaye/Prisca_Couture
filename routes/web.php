@@ -35,14 +35,21 @@ Route::get('modele', [ModelesController::class, 'modele'])->name('modele');
 Route::post('modeleT', [ModelesController::class, 'modeleT'])->name('modeleT');
 Route::get('modeles', [ModelesController::class, 'modeles'])->name('modeles');
 
-Route::get('Couture/couture', [CoutureController::class, 'couture'])->name('couture');
+Route::get('coutures', [CoutureController::class, 'coutures'])->name('coutures');
+Route::post('couture', [CoutureController::class, 'coutureT'])->name('coutureT');
+Route::get('couture', [CoutureController::class, 'couture'])->name('couture');
 
-Route::get('Paiement/paiement', [PaiementController::class, 'paiement'])->name('paiement');
-Route::get('Paiement/paiements', [PaiementController::class, 'paiements'])->name('paiements');
-Route::get('Paiement/paiementT', [PaiementController::class, 'paiementT'])->name('paiementT');
+Route::get('paiement', [PaiementController::class, 'paiement'])->name('paiement');
+Route::get('paiements', [PaiementController::class, 'paiements'])->name('paiements');
+Route::post('paiementT', [PaiementController::class, 'paiementT'])->name('paiementT');
+
+Route::get('depensel', [PaiementController::class, 'depensel'])->name('depensel');
+Route::get('depenseaj', [PaiementController::class, 'depenseaj'])->name('depenseaj');
+Route::post('depense', [PaiementController::class, 'depense'])->name('depense');
 
 Route::get('Personnels/personnels', [PersonnelsController::class, 'personnels'])->name('personnels');
-
+Route::get('ajout_personnel', [PersonnelsController::class, 'ajout_personnel'])->name('ajout_personnel');
+Route::post('Personnels/personnelT', [PersonnelsController::class, 'personnelT'])->name('personnelT');
 
 
 

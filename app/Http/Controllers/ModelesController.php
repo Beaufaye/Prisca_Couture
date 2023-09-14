@@ -27,7 +27,7 @@ class ModelesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function modele(Request $request)
+    public function modele()
     {
         return view('Modeles.ajouterM');
     }
@@ -42,7 +42,7 @@ class ModelesController extends Controller
 
         $modeles = new Modeles();
         $modeles->nom_modele = $request->nom_modele;
-        $modeles->image = $request->image->store('photo', 'public');
+        $modeles->image = $request->image->store('photo', 'public', 'app');
         $modeles->save();
 
         return redirect('modele')->with('status', 'Le modèle a bien été ajouté.');
