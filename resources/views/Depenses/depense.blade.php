@@ -18,7 +18,7 @@
              <th>Montant</th>
              <th>Date dépense</th>
              <th>Personnel ayant éffectué la dépense</th>
-             <th>Client</th>
+            
              
          </tr>
         </thead>
@@ -31,10 +31,10 @@
             <td>{{ $depense->date_depense}}</td>
             <td>{{ $depense->personnels_id}}</td>
         </tr>
-        
+        @endforeach
       </tbody>
      </table>
-     @endforeach
+   
     </div>
   </section>
 

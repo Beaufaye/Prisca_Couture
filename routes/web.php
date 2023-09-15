@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ModelesController;
 use App\Http\Controllers\CoutureController;
+use App\Http\Controllers\DepenseController;
 use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\PersonnelsController;
 use Illuminate\Support\Facades\Route;
@@ -43,9 +44,9 @@ Route::get('paiement', [PaiementController::class, 'paiement'])->name('paiement'
 Route::get('paiements', [PaiementController::class, 'paiements'])->name('paiements');
 Route::post('paiementT', [PaiementController::class, 'paiementT'])->name('paiementT');
 
-Route::get('depensel', [PaiementController::class, 'depensel'])->name('depensel');
-Route::get('depenseaj', [PaiementController::class, 'depenseaj'])->name('depenseaj');
-Route::post('depense', [PaiementController::class, 'depense'])->name('depense');
+Route::get('depensel', [DepenseController::class, 'depensel'])->name('depensel');
+Route::get('depenseaj', [DepenseController::class, 'depenseaj'])->name('depenseaj');
+Route::post('depense', [DepenseController::class, 'depense'])->name('depense');
 
 Route::get('Personnels/personnels', [PersonnelsController::class, 'personnels'])->name('personnels');
 Route::get('ajout_personnel', [PersonnelsController::class, 'ajout_personnel'])->name('ajout_personnel');

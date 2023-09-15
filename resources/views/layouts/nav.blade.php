@@ -40,7 +40,7 @@
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('depenseaj')}}">
+        <a class="nav-link collapsed" href="{{route('depensel')}}">
           <i class="bi bi-currency-exchange"></i>
           <span>DEPENSE</span>
         </a>

@@ -30,15 +30,15 @@ class CoutureController extends Controller
         $request->validate([
             'date_depot' => 'required',
              'date_recuperation' => 'required',
-             'modele_id' => 'required',
-             'client_id' => 'required',
+             'modeles_id' => 'required',
+             'clients_id' => 'required',
          ]);
 
         $couture = new Couture();
         $couture->date_depot = $request->date_depot;
         $couture->date_recuperation = $request->date_recuperation;
-        $couture->modele_id = $request->modele_id;
-        $couture->client_id = $request->client_id;
+        $couture->modeles_id = $request->modeles_id;
+        $couture->clients_id = $request->clients_id;
         $couture->save();
 
         return redirect('couture')->with('status', 'Le modèle a bien été ajouté.');

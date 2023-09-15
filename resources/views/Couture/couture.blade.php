@@ -28,8 +28,8 @@
             <th>{{ $couture->id}}</th>
             <td>{{ $couture->date_depot}}</td>
             <td>{{ $couture->date_recuperation}}</td>
-            <td>{{ $couture->modele_id}}</td>
-            <td>{{ $couture->client_id}}</td>
+            <td>{{ $couture->modeles_id}}</td>
+            <td>{{ $couture->clients_id}}</td>
         </tr>
         @endforeach
       </tbody>

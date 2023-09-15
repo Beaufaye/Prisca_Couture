@@ -3,7 +3,6 @@
 namespace App\Models;
 use App\Models\clients;
 use App\Models\modeles;
-use App\Models\paiement;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,7 +22,7 @@ class couture extends Model
     }
 
     function Modele(){
-        return $this->belongsTo(modeles::class, 'modele_id');
+        return $this->belongsTo(modeles::class, 'modeles_id');
     }
 
     
