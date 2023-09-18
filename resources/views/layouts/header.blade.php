@@ -29,7 +29,7 @@
             </li>
             
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="welcome.blade.php">
+              <a class="dropdown-item d-flex align-items-center" href="">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Se déconnecter</span>
               </a>

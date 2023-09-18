@@ -38,7 +38,7 @@
 
             <!-- Sales Card -->
             <div class="col-xxl-3 col-md-4">
-              <div class="card info-card sales-card">
+              <div class="card info-card sales-card bg-primary">
                 <div class="card-body">
                   <h5 class="card-title">CLIENTS</h5>
 
@@ -47,7 +47,7 @@
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>4865</h6>
+                      <h6 class="text-warning">5</h6>
                     </div>
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                       <i class="bi bi-scissors"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1375</h6>
+                      <h6>3</h6>
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
 
             <!-- Sales Card -->
             <div class="col-xxl-3 col-md-4">
-              <div class="card info-card sales-card">
+              <div class="card info-card sales-card bg-success">
                 <div class="card-body">
                   <h5 class="card-title">PERSONNELS</h5>
 
@@ -83,7 +83,7 @@
                       <i class="bi bi-person"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>15</h6>
+                      <h6>3</h6>
                     </div>
                   </div>
                 </div>
@@ -94,6 +94,9 @@
           </div>
         </div><!-- End Left side columns -->
 
+        <div class="col-lg-12">
+            <img src="assets/img/logooo.png" style="width: 800px; display:flex" alt="">
+        </div>
        
 
       </div>

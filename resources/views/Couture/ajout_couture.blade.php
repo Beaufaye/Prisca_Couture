@@ -29,7 +29,7 @@
               <div class="mb-3 row">
                 <label  class="col-sm-2 col-form-label">Date de récupération</label>
                 <div class="col-sm-10">
-                  <input type="date" name="date_de_recuperation" class="form-control" required>
+                  <input type="date" name="date_recuperation" class="form-control" required>
                 </div>
               </div>
 
@@ -60,7 +60,7 @@
                 </div>
 
           <button type="submit" class="btn btn-primary">ENREGISTRER</button>
-          <a href="{{route('paiement')}}"><button type="button" class="btn btn-dark">VOIR LES PAIEMENTS</button></a>
+          <a href="{{route('couture')}}"><button type="button" class="btn btn-dark">VOIR LA LISTE DES COUTURES</button></a>
       </form>
 
 

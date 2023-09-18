@@ -28,9 +28,9 @@ class CoutureController extends Controller
     public function coutureT(Request $request)
     {
         $request->validate([
-            'date_depot' => 'required',
-             'date_recuperation' => 'required',
-             'modeles_id' => 'required',
+           'date_depot' => 'required',
+            'date_recuperation' => 'required',
+            'modeles_id' => 'required',
              'clients_id' => 'required',
          ]);
 

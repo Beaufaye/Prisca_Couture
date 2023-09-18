@@ -15,18 +15,16 @@
     @endif
     
     <div class="row">
-      <form action="{{route('paiementT')}}" method="POST" class="form-group">
+      <form action="{{route('paiementT')}}" method="POST" class="form-group" enctype="multipart/form-data">
         @csrf
        
-       
-          
             <div class="mb-3 row">
                 <label  class="col-sm-2 col-form-label">Objet</label>
                 <div class="col-sm-10">
                     <select name="objet" class="form-select" required>
-                        <option value="">Avance</option>
-                        <option value="">Paiement Total</option>
-                        <option value="">Reste</option>
+                        <option value="Avance">Avance</option>
+                        <option value="Paiement Total">Paiement Total</option>
+                        <option value="Reste">Reste</option>
                      </select>
                 </div>
               </div>

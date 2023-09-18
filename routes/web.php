@@ -52,7 +52,7 @@ Route::get('Personnels/personnels', [PersonnelsController::class, 'personnels'])
 Route::get('ajout_personnel', [PersonnelsController::class, 'ajout_personnel'])->name('ajout_personnel');
 Route::post('Personnels/personnelT', [PersonnelsController::class, 'personnelT'])->name('personnelT');
 
-
+Route::get('edit_clients',[ClientsController::class, 'editer'])->name('clients_edit');
 
 
 

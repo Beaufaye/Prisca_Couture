@@ -40,7 +40,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary">ENREGISTRER</button>
-          <a href="{{route('personnels')}}"><button type="button" class="btn btn-dark">VOIR LA LISTE DES MODELES</button></a>
+          <a href="{{route('personnels')}}"><button type="button" class="btn btn-dark">VOIR LA LISTE DES PERSONNELS</button></a>
         </form>
 
   

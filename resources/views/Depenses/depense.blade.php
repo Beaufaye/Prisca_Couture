@@ -3,7 +3,7 @@
 <main id="main" class="main">
 
 <div class="pagetitle col-lg-8">
-    <a href="{{route('depenseaj')}}"><button type="button" class="btn btn-primary">EFFECTUER UN PAIEMENT</button></a>
+    <a href="{{route('depenseaj')}}"><button type="button" class="btn btn-primary">ENREGISTRER UNE DEPENSE</button></a>
     <h1 class="text-center">DEPENSE</h1>
   </div><!-- End Page Title -->
 
@@ -29,7 +29,7 @@
             <th>{{ $depense->id}}</th>
             <td>{{ $depense->montant}}</td>
             <td>{{ $depense->date_depense}}</td>
-            <td>{{ $depense->personnels_id}}</td>
+            <td>{{ $depense->personnel->nom}}</td>
         </tr>
         @endforeach
       </tbody>

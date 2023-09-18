@@ -11,6 +11,7 @@ class rendez_vous extends Model
 
     protected $fillable = [
         'date_rdv',
+        'clients_id'
     ];
 
     function Client(){

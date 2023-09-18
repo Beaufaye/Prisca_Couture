@@ -26,13 +26,13 @@ class PaiementController extends Controller
     {
          $request->validate([
              
-             'objet' => 'required',
+           'objet' => 'required',
              'montant' => 'required', 
              'reste' => 'required',
              'date_paiement' => 'required',
-             'clients_id' => 'required',
+           'clients_id' => 'required',
              
-         ]);
+        ]);
 
         $paiement = new Paiement();
         $paiement->objet = $request->objet;

@@ -44,6 +44,8 @@ class DepenseController extends Controller
         $depense->date_depense = $request->date_depense;
         $depense->personnels_id = $request->personnels_id;
         $depense->save();
+
+        return redirect('ajout_depense')->with('status', 'La dépense a bien été ajouté.');
     }
 
     /**

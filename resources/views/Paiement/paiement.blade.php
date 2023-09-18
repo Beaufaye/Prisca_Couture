@@ -3,7 +3,7 @@
 <main id="main" class="main">
 
 <div class="pagetitle col-lg-8">
-    <a href="{{route('paiements')}}"><button type="button" class="btn btn-primary">EFFECTUER UN PAIEMENT</button></a>
+    <a href="{{route('paiements')}}"><button type="button" class="btn btn-primary">ENREGISTRER UN PAIEMENT</button></a>
     <h1 class="text-center">PAIEMENTS</h1>
   </div><!-- End Page Title -->
 
@@ -17,9 +17,7 @@
              <th>ID</th>
              <th>Objet</th>
              <th>Montant</th>
-             <th>Acompte</th>
              <th>Reste</th>
-             <th>Mode de paiement</th>
              <th>Date paiement</th>
              <th>Client</th>
              
@@ -32,16 +30,14 @@
             <th>{{ $paiement->id}}</th>
             <td>{{ $paiement->objet}}</td>
             <td>{{ $paiement->montant}}</td>
-            <td>{{ $paiement->acompte}}</td>
             <td>{{ $paiement->reste}}</td>
-            <td>{{ $paiement->mode_paiement}}</td>
             <td>{{ $paiement->date_paiement}}</td>
-            <td>{{ $paiement->couture_id}}</td>
+            <td>{{ $paiement->client->nom_prenom}}</td>
         </tr>
-        
+        @endforeach
       </tbody>
      </table>
-     @endforeach
+     
     </div>
   </section>
 
